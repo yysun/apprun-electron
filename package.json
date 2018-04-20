@@ -1,0 +1,28 @@
+{
+  "name": "apprun-electron",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npm run build && electron ./index.js",
+    "build:index": "tsc index.ts",
+    "build:app": "webpack -p --mode production",
+    "build": "npm run build:index && npm run build:app",
+    "dev": "webpack -w --mode production"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^2.0.0-beta.7",
+    "source-map-loader": "^0.2.3",
+    "ts-loader": "^4.2.0",
+    "typescript": "^2.8.3",
+    "webpack": "^4.6.0",
+    "webpack-cli": "^2.0.14"
+  },
+  "dependencies": {
+    "apprun": "^1.12.0"
+  }
+}
