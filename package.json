@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npm run build && electron ./index.js",
-    "build:index": "tsc index.ts",
+    "start": "npm run build && electron ./main.js",
+    "build:index": "tsc main.ts",
     "build:app": "webpack -p --mode production",
     "build": "npm run build:index && npm run build:app",
     "dev": "webpack -w --mode production"
