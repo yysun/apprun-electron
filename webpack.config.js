@@ -1,6 +1,6 @@
 module.exports = {
   entry: {
-    'app': './app.tsx',
+    'app': './src/app.tsx',
   },
   output: {
     filename: '[name].js'
@@ -10,7 +10,7 @@ module.exports = {
   },
   module: {
     rules: [
-      { test: /.tsx?$/, loader: 'ts-loader' },
+      { test: /\.tsx?$/, loader: 'ts-loader' },
       { test: /\.js$/, use: ["source-map-loader"], enforce: "pre" }
     ]
   },
