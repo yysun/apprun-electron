@@ -4,11 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "electron": "electron ./main.js",
-    "start": "npm run build && electron ./main.js",
-    "build:index": "tsc main.ts",
+    "electron": "npm run build:main && electron ./main.js",
+    "start": "npm run dev && npm run electron",
+    "build:main": "tsc main.ts",
     "build:app": "webpack -p --mode production",
-    "build": "npm run build:index && npm run build:app",
+    "build": "npm run build:main && npm run build:app",
     "dev": "webpack -w --mode production"
   },
   "keywords": [],

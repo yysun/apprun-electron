@@ -3,8 +3,9 @@ module.exports = {
     'app': './src/app.tsx',
   },
   output: {
-    filename: '[name].js'
+    filename: '[name].js',
   },
+  target: "electron-renderer",
   resolve: {
     extensions: ['.ts', '.tsx', '.js']
   },
