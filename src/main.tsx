@@ -9,7 +9,7 @@ export default class extends Component {
     </div>
     <br/>
     <div>
-      <button onclick={app.run('@electron', 'hello', 'from', 'Renderer')}>Hello to Electron Main Process</button>
+      <button onclick={()=>app.run('@electron', 'hello', 'from', 'Renderer')}>Hello to Electron Main Process</button>
     </div>
   </>
   update = {

@@ -68,12 +68,13 @@ electron_1.app.on('activate', function () {
         createWindow();
     }
 });
-electron_1.ipcMain.on('@electron', function (event) {
+electron_1.ipcMain.on('@electron', function (_) {
     var arg = [];
     for (var _i = 1; _i < arguments.length; _i++) {
         arg[_i - 1] = arguments[_i];
     }
     console.log.apply(console, arg);
 });
+electron_1.app.allowRendererProcessReuse = true;
 // In this file you can include the rest of your app"s specific main process
 // code. You can also put them in separate files and require them here.
